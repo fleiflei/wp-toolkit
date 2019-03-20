@@ -11,24 +11,26 @@
 function admin_bar_ribbon_style()
 {
 
-    if (get_current_user_id() == 1) {
+    if (get_current_user_id() == 1) { // only show to first admin (e.g. a developer?)
 
-        $color_rgb_1 = '255,224,0';
+        $color_rgb_1 =  '255,235,59';
         $color_rgb_2 = '0,0,0';
-        $transparency_1 = '.3';
+        $transparency_1 = '.314';
         $transparency_2 = '0';
 
         switch (env('WP_ENV')) { // @todo check for function env()
             case 'stage':
-            case 'production':
-                $color_rgb_2 = '255,57,0';
-                $transparency_1 = .4;
-                $transparency_2 = $transparency_1;
+            case 'staging':
                 break;
             case 'development':
+                $transparency_1 = 0.125;
+                $color_rgb_1 = '255,255,255';
+                break;
+            case 'production':
             default:
-                $transparency_1 = 0;
-                $transparency_2 = 0;
+                $color_rgb_2 = '255,0,0';
+                $transparency_1 = .4;
+                $transparency_2 = $transparency_1;
         }
 
         if ($transparency_1 || $transparency_2) {
