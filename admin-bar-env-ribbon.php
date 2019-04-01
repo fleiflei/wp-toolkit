@@ -36,6 +36,8 @@ function admin_bar_ribbon_style()
 
         if (function_exists('env') && env('WP_ENV')) {
             $env = env('WP_ENV');
+        } elseif (getenv('WP_ENV')) {
+            $env = getenv('WP_ENV');
         }
 
         $env = apply_filters('flei/toolkit/ribbon_admin_bar/env', $env);
