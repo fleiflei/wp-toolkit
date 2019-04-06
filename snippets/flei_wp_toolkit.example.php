@@ -36,7 +36,7 @@ $flei_snippets = array(
 //    'visualcomposer.php',
 );
 
-foreach ($flei_tools as $file) {
+foreach ($flei_snippets as $file) {
     require_once __DIR__ . '/' . $file; // adjust path
 }
 
