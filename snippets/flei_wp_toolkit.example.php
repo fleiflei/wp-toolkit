@@ -14,7 +14,7 @@ $flei_tools = array(
     'remove-emojis.php',
     'tools.php',
     'wp-env-body-class.php',
-
+    'sanitize-filenames.php',
 );
 
 foreach ($flei_tools as $file) {
