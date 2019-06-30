@@ -15,6 +15,7 @@ $flei_tools = array(
     'tools.php',
     'wp-env-body-class.php',
     'sanitize-filenames.php',
+    'laravel-mix.php'
 );
 
 foreach ($flei_tools as $file) {
