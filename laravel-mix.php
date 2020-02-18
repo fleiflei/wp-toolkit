@@ -32,22 +32,24 @@ if (!function_exists('mix')) {
             $manifestDirectory = "/{$manifestDirectory}";
         }
 
-        if (!$manifest || (is_numeric($manifest) && $manifest < 0)) {
+        if (!$manifest) {
             if (!file_exists($manifestPath = ($publicPath . $manifestDirectory . '/mix-manifest.json'))) {
 //                throw new Exception('The Mix manifest does not exist.');
                 $manifest = -1; // no manifest
             } else {
                 $manifest = json_decode(file_get_contents($manifestPath), true);
-                if ($manifest && !array_key_exists($path, $manifest)) {
-                    throw new Exception(
-                        "Unable to locate Mix file: {$path}. Please check your " .
-                        'webpack.mix.js output paths and try again.'
-                    );
-                } else {
-                    $path_suffix = $manifest[$path];
-                }
             }
         }
+
+      if ($manifest && (!array_key_exists($path, $manifest) || (is_numeric($manifest) && $manifest < 0))) {
+        throw new Exception(
+          "Unable to locate Mix file: {$path}. Please check your " .
+          'webpack.mix.js output paths and try again.'
+        );
+      } else {
+        $path_suffix = $manifest[$path];
+      }
+
 
         $path_prefix = $publicPath;
 
@@ -59,6 +61,6 @@ if (!function_exists('mix')) {
             $path_prefix = '';
         }
 
-        return $path_prefix . $path_suffix;
+      return $path_prefix . $path_suffix;
     }
 }
