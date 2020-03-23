@@ -13,11 +13,14 @@ add_filter('sanitize_file_name', 'flei_sanitize_filename');
  * apparently do not work the same on all systems, due to PHP inconsistencies
  *
  * @param $file
+ *
  * @return string
  */
 
-function flei_sanitize_filename($file) {
-    $ext = end(explode('.', $file));
-    $file = str_replace('.' . $ext, '', $file);
-    return remove_accents($file) . '.' . $ext;
+function flei_sanitize_filename($file)
+{
+  $ext = end(explode('.', $file));
+  $file = str_replace('.'.$ext, '', $file);
+
+  return remove_accents($file).'.'.$ext;
 }
