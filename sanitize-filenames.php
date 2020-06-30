@@ -19,7 +19,8 @@ add_filter('sanitize_file_name', 'flei_sanitize_filename');
 
 function flei_sanitize_filename($file)
 {
-  $ext = end(explode('.', $file));
+  $file_array = explode('.', $file);
+  $ext = end($file_array);
   $file = str_replace('.'.$ext, '', $file);
 
   return remove_accents($file).'.'.$ext;
