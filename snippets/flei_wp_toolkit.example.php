@@ -1,13 +1,14 @@
 <?php
 
 /**
- * Include static tools that don't need to be modified by themselves.
+ * Include static snippets that don't need to be modified by themselves.
  */
 $flei_tools = [
     'admin-bar-env-ribbon.php',
     'clean-up.php',
     'disable-author-archives.php',
     'disable-comments.php',
+    'disable-feeds.php',
     'disable-json-api.php',
     'disable-google-fonts-in-backend.php',
     'excerpt.php',
