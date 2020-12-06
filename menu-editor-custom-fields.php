@@ -30,7 +30,7 @@
 add_action('wp_update_nav_menu_item', 'custom_nav_update', 10, 3);
 function custom_nav_update($menu_id, $menu_item_db_id, $args)
 {
-  if (is_array($_REQUEST['menu-item-custom-fields'])) {
+  if (isset($_REQUEST['menu-item-custom-fields']) && is_array($_REQUEST['menu-item-custom-fields'])) {
     $custom_value = $_REQUEST['menu-item-custom-fields'][$menu_item_db_id];
     update_post_meta($menu_item_db_id, '_menu_item_custom_fields', $custom_value);
   }
