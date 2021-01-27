@@ -16,6 +16,7 @@ $flei_tools = [
     'menu-editor-custom-fields.php',
     'nav-wpml-lang-item.php', // WPML menu item added to end of menu
     'remove-emojis.php',
+    'remove-wp-favicon.php',
     'sanitize-filenames.php',
     'tools.php',
     'wp-env-body-class.php',
