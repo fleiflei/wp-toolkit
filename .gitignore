@@ -1,4 +1,0 @@
-/site-specific/*
-/snippets/*
-!/snippets/*.example.*
-.idea/
