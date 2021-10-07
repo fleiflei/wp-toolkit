@@ -5,7 +5,7 @@
  * Added: 06.04.2021
  */
 
-add_filter('allowed_block_types', 'flei_allowed_block_types', 10, 2);
+add_filter('allowed_block_types_all', 'flei_allowed_block_types', 10, 2);
 
 function flei_allowed_block_types($allowed_blocks, $post)
 {
