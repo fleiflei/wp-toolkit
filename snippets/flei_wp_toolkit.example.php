@@ -9,18 +9,17 @@ $flei_tools = [
     'disable-author-archives.php',
     'disable-comments.php',
     'disable-feeds.php',
-//    'disable-json-api.php'
     'disable-google-fonts-in-backend.php',
     'excerpt.php',
     'gutenberg-gallery-carousel.php',
     'laravel-mix.php',
-    'menu-editor-custom-fields.php',
-    'nav-wpml-lang-item.php', // WPML menu item added to end of menu
     'remove-emojis.php',
     'remove-wp-favicon.php',
     'sanitize-filenames.php',
     'tools.php',
     'wp-env-body-class.php',
+    'hide-users-from-rest-api.php',
+    'remove-wp-frontend-styles.php'
 ];
 
 foreach ($flei_tools as $file) {
