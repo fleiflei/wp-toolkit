@@ -19,7 +19,8 @@ $flei_tools = [
     'tools.php',
     'wp-env-body-class.php',
     'hide-users-from-rest-api.php',
-    'remove-wp-frontend-styles.php'
+    'remove-wp-frontend-styles.php',
+    'active_users.php',
 ];
 
 foreach ($flei_tools as $file) {
