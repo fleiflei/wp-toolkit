@@ -17,7 +17,7 @@ add_action('admin_bar_menu', function ($wp_admin_bar) {
     // Add the dropdown menu
     $wp_admin_bar->add_node([
         'id'    => 'logged_in_users',
-        'title' => 'Logged In Users',
+        'title' => count($loggedInUsers) . ' logged in users',
         'meta'  => [
             'class' => 'logged-in-users-dropdown'
         ]
